@@ -1,0 +1,106 @@
+*{
+  
+  margin : 0;
+  padding : 0;
+  background-color : #000;
+  box-sizing: border-box;
+}
+
+html,body{
+  width : 100%;
+  height : 100%;
+}
+
+#map {
+  height: 80vh;
+  width: 90%;
+  margin: 80px auto 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.search-container {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#search-input {
+  padding: 8px 12px;
+  border: 2px solid #000;
+  border-radius: 4px;
+  width: 300px;
+  font-size: 14px;
+  background-color: white;
+}
+
+#search-btn {
+  padding: 8px 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+#search-btn:hover {
+  background: #0056b3;
+}
+
+/* Remove background from marker popups */
+
+/* Style the zoom control buttons */
+.leaflet-control-zoom a {
+  background: white !important;
+  
+  border: 2px solid #ccc !important;
+  border-radius: 4px !important;
+  font-weight: bold !important;
+  font-size: 16px !important;
+  width: 30px !important;
+  height: 30px !important;
+  line-height: 26px !important;
+  text-align: center !important;
+ 
+  transition: all 0.3s ease !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background: #f8f9fa !important;
+  color: whitesmoke !important;
+  border-color: #999 !important;
+   
+}
+
+.leaflet-control-zoom a:active {
+  background: #e9ecef !important;
+  transform: translateY(1px) !important;
+}
+
+.leaflet-control-zoom-in {
+  border-bottom: 1px solid #ccc !important;
+}
+
+/* Style the markers to remove black color */
+.leaflet-marker-icon {
+  filter: hue-rotate(180deg) brightness(1.2) !important;
+}
+
+.leaflet-marker-shadow {
+  display: none !important;
+}
+
+/* Custom marker styling */
+.leaflet-marker-icon {
+  background: #007bff !important;
+  border: 2px solid white !important;
+  border-radius: 50% !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3) !important;
+}
